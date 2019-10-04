@@ -112,8 +112,8 @@ public class Validation extends AppCompatActivity {
         String emtext = status.getText().toString().trim();
         String ptext = pass.getText().toString().trim();
         if(emtext.isEmpty()){
-            name.requestFocus();
-            name.setError("Enter Username");
+            status.requestFocus();
+            status.setError("Enter Username");
             return;
         }
         if(ptext.isEmpty()){

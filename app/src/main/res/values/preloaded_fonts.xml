@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/coda</item>
         <item>@font/lato</item>
         <item>@font/lato_light</item>
         <item>@font/lato_thin</item>
+        <item>@font/londrina_solid</item>
         <item>@font/patua_one</item>
         <item>@font/poppins</item>
     </array>
