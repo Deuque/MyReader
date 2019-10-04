@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/pdf"
+        android:icon="@drawable/pdf2"
+        android:title="Pdf file"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/doc"
+        android:icon="@drawable/doc2"
+        android:title="Doc file"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/txt"
+        android:icon="@drawable/txt3"
+        android:title="Txt file"
+        app:showAsAction="always"/>
+</menu>

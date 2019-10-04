@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BscProject</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_exit">Logout</string>
+    <string name="paste_word">Paste particular text you want to listen to, save</string>
+    <string name="upload_word">Select Documents and materials you want to read</string>
+    <string name="bl1">Evaluation Only. Created with Aspose.Words. Copyright 2003-2019 Aspose Pty Ltd.</string>
+    <string name="bl2">Created with an evaluation copy of Aspose.Words. To discover the full versions of </string>
+    <string name="bl3">our APIs please visit: https://products.aspose.com/words/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

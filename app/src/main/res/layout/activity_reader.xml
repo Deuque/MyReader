@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reader"
+    android:id="@+id/parent"
+    android:background="@color/aux1"
+    android:animateLayoutChanges="true">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:elevation="4dp"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Digital Designs"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginEnd="10dp"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aux4"
+        android:layout_below="@id/rtoolbar"/>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ld6"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/viewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider"
+        android:animateLayoutChanges="true"
+        android:visibility="gone">
+
+    </com.github.barteksc.pdfviewer.PDFView>
+        <LinearLayout
+            android:id="@+id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:animateLayoutChanges="true"
+            android:background="@color/aux1"
+            android:visibility="gone">
+
+
+            <!--<ProgressBar-->
+                <!--android:id="@+id/progressBar"-->
+                <!--style="?android:attr/progressBarStyleHorizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0"
+                android:layout_marginBottom="-10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/prev"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/prev"
+                    android:layout_margin="20dp"
+                    android:tint="@color/aux3"/>
+                <ImageView
+                    android:id="@+id/maincontrol"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/play"
+                    android:layout_margin="20dp"/>
+                <ImageView
+                    android:id="@+id/next"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/next"
+                    android:layout_margin="20dp"
+                    android:tint="@color/aux3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

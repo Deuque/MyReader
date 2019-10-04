@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/aux1">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="180dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toTopOf="@id/view">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/b1"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="4"
+            android:layout_margin="35dp"
+            android:text="Advanced Digital Laboratory in perforated reearch stu "
+            android:textAlignment="center"
+            android:textColor="@color/aux5"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:rotation="-8"/>
+        <ImageView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pdf2"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30dp"/>
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="29dp"-->
+        <!--android:ellipsize="end"-->
+        <!--android:fontFamily="@font/lato"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="Chapter One"-->
+        <!--android:textColor="@color/aux2"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_marginStart="80dp"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:paddingStart="2dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@id/relativeLayout"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/type"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:background="@drawable/bgshape3"-->
+        <!--android:backgroundTint="@color/aux9"-->
+        <!--android:text="PDF"-->
+        <!--android:textSize="12sp"-->
+        <!--android:textColor="@color/aux1"-->
+        <!--android:paddingStart="8dp"-->
+        <!--android:paddingEnd="8dp"-->
+        <!--app:layout_constraintStart_toEndOf="@id/relativeLayout"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/name" />-->
+    <!--<TextView-->
+        <!--android:id="@+id/size"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Size: 49mb"-->
+        <!--android:textSize="12sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_marginTop="1dp"-->
+        <!--android:paddingStart="2dp"-->
+        <!--android:textColor="@color/aux3"-->
+        <!--app:layout_constraintStart_toEndOf="@id/relativeLayout"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/type" />-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/aux4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icongroup"
+
+        />
+
+</android.support.constraint.ConstraintLayout>

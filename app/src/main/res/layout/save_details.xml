@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgshape4"
+        android:hint="Enter Name of Document"
+        android:padding="10dp"
+        android:backgroundTint="@color/aux4"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/sbut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:textColor="@color/aux1"
+        android:textSize="15sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_below="@id/fname"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>

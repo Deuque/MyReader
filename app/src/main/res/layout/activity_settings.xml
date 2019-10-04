@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aux1"
+    android:id="@+id/content">
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/img4"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:alpha="0.2"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/foreimg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="130dp"-->
+        <!--android:scaleType="fitXY"/>-->
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollIndicators="right"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"/>
+            <RelativeLayout
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/title">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/backimg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/contact2"
+                    />
+                
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@id/backimg"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/poppins"/>
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textColor="@color/aux2"
+                    android:textSize="15sp"
+                    android:layout_toEndOf="@id/backimg"
+                    android:layout_below="@id/username"
+                    android:fontFamily="@font/poppins"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:layout_below="@id/details">
+                <TextView
+                    android:id="@+id/reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Text-To-Speech Settings"
+                    android:background="@drawable/bgshape4"
+                    android:backgroundTint="@color/aux4"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/reset"
+                    android:drawableTint="@color/aux2"
+                    android:fontFamily="@font/lato"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Speech rate"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/lato"
+                    android:textSize="15sp"
+                    android:textColor="#000"/>
+                <SeekBar
+                    android:id="@+id/sr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="19"
+                    android:progress="9"
+                    android:progressDrawable="@drawable/seekbarshape"
+                    android:maxHeight="5dp"
+                    android:thumb="@drawable/thumbimg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pitch"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/lato"
+                    android:textSize="15sp"
+                    android:textColor="#000"/>
+                <SeekBar
+                    android:id="@+id/p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="19"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/seekbarshape"
+                    android:maxHeight="5dp"
+                    android:thumb="@drawable/thumbimg"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Files Backup (Requires Network)"
+                    android:background="@drawable/bgshape4"
+                    android:backgroundTint="@color/aux4"
+                    android:padding="10dp"
+                    android:fontFamily="@font/lato"
+                    android:textSize="16sp"
+                    android:layout_marginTop="30dp"/>
+                <Button
+                    android:id="@+id/backup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/aux7"
+                    android:text="Backup"
+                    android:textColor="@color/aux1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"/>
+                <Button
+                    android:id="@+id/rf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/aux7"
+                    android:text="Retrieve Files"
+                    android:textColor="@color/aux1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="10dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

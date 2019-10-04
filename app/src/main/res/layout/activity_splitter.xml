@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Splitter">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/stoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:elevation="4dp"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:animateLayoutChanges="true"
+        app:subtitle="Create Document"
+        app:subtitleTextColor="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:animateLayoutChanges="true"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Document"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_toLeftOf="@id/save"/>
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/aux6"
+                android:layout_marginEnd="7dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/stoolbar"
+        android:gravity="start"
+        android:hint="Enter Text"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:background="@null"/>
+    <ImageView
+        android:id="@+id/empty"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/cr1"/>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient2"
+    tools:context=".SplashScreen"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp">
+
+
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/sp1"
+        android:scaleType="fitXY"
+        android:layout_marginTop="70dp"
+        app:siShape="@drawable/bgshape7"
+        android:alpha="0.8"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/aux1"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@id/imageview">
+
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Bsc Project"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:layout_above="@id/a3"
+        android:fontFamily="@font/patua_one"/>
+    <TextView
+        android:id="@+id/a3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Text-To-Speech app to enhance learning"
+        android:textColor="@color/aux5"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/lato"/>
+    </LinearLayout>
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ld6"/>
+
+</RelativeLayout>
