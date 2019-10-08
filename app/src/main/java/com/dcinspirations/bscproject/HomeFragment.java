@@ -269,7 +269,7 @@ public class HomeFragment extends Fragment {
             details = BaseApp.getFileDetails(fileuri.getPath());
             saveFile(fileuri);
         }else{
-            Toast.makeText(ctx, "Please Select a myfile", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ctx, "Please Select a file", Toast.LENGTH_SHORT).show();
         }
     }
 

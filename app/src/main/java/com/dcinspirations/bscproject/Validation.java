@@ -137,6 +137,7 @@ public class Validation extends AppCompatActivity {
                                     UserDetails ud = dataSnapshot.getValue(UserDetails.class);
                                     new Sp().setLoggedIn(true);
                                     new Sp().setUInfo(dataSnapshot.getKey(),ud.name,ud.status);
+                                    startActivity(new Intent(Validation.this,MainActivity.class));
                                     finish();
                                 }
 
@@ -187,6 +188,7 @@ public class Validation extends AppCompatActivity {
                                     .child("status").setValue(emtext);
                             new Sp().setLoggedIn(true);
                             new Sp().setUInfo(FirebaseAuth.getInstance().getCurrentUser().getUid(),ntext,emtext);
+                            startActivity(new Intent(Validation.this,MainActivity.class));
                             finish();
                         }else{
                             Toast.makeText(Validation.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
