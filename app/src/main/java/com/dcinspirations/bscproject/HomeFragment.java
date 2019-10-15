@@ -209,7 +209,7 @@ public class HomeFragment extends Fragment {
 
 
     private void selecticon(){
-        PopupMenu pm = new PopupMenu(getView().getContext(),ci,Gravity.END);
+        PopupMenu pm = new PopupMenu(getView().getContext(),cimg,Gravity.END);
 
             pm.getMenuInflater().inflate(R.menu.main4,pm.getMenu());
 
