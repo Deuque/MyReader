@@ -15,11 +15,14 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
+            useProguard false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            shrinkResources true
+//            shrinkResources true
         }
     }
+
+
 }
 
 dependencies {
@@ -34,15 +37,17 @@ dependencies {
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     implementation 'com.tbuonomo:creative-viewpager:1.0.1'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
 
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'com.jackandphantom.android:blurimage:1.2.0'
 
-    implementation 'com.itextpdf:itextg:5.5.10'
-    implementation files('libs/aspose-words-19.2-android.via.java.jar')
+
+        implementation 'com.itextpdf:itextg:5.5.10'
+        implementation files('libs/aspose-words-19.2-android.via.java.jar')
+
 
 
     implementation 'com.google.firebase:firebase-core:16.0.8'

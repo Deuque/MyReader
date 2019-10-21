@@ -21,6 +21,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -203,8 +204,11 @@ public class OtherFragment extends Fragment {
                         public void onGlobalLayout() {
                             prvl.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                             int vw = prvl.getWidth();
-                            int b = 480;
-                            int spans = (int) Math.floor(vw/b);
+                            DisplayMetrics metrics = ctx.getResources().getDisplayMetrics();
+                            int d = metrics.densityDpi;
+                            int b = 140;
+                            int b2 = b*(d/160);
+                            int spans = (int) Math.floor((double) vw/(double) b2);
                             prv.setLayoutManager(new GridLayoutManager(ctx, spans));
                         }
                     }

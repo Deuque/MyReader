@@ -108,13 +108,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_home, container, false);
         ctx = v.getContext();
-//        bytearrayoutputstream = new ByteArrayOutputStream();
-//        ci = v.findViewById(R.id.crimg);
-//        si = v.findViewById(R.id.selimg);
-//        reduceImage(R.drawable.hm2,ci);
-//        reduceImage(R.drawable.hm1,si);
 
-//        ci = v.findViewById(R.id.rand);
         cimg = v.findViewById(R.id.cimg);
         String gend = new Sp().getGender();
         cimg.setImageResource(gend.equalsIgnoreCase("male")?R.drawable.contact2:R.drawable.female);
@@ -193,8 +187,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-//        saveToDevice();
-//        getFromDevice();
 
 
         rv =  v.findViewById(R.id.rv);
@@ -294,68 +286,6 @@ public class HomeFragment extends Fragment {
         }
 
     }
-//    private void uploadFile(Uri uri){
-//        pd.setProgress(0);
-//        pd.show();
-//
-//        final String filename = System.currentTimeMillis()+"";
-//        final StorageReference storageReference = storage.getReference().child("FileUploads").child(details[0]+"."+details[1]);
-//        storageReference.putFile(uri)
-//                .addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-//                        if(task.isSuccessful()) {
-//
-//                            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//                                @Override
-//                                public void onSuccess(Uri uri) {
-//                                    String duri= uri.toString();
-//                                    DatabaseReference reference = database.getReference().child(key).push();
-//                                    reference.child("name").setValue(details[0]);
-//                                    reference.child("type").setValue(details[1]);
-//                                    reference.child("time").setValue(getTime());
-//                                    reference.child("url").setValue(duri)
-//                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                        @Override
-//                                        public void onComplete(@NonNull Task<Void> task) {
-//                                            if(!task.isSuccessful()){
-//                                                pd.cancel();
-//                                                Toast.makeText(ctx, "An error occurred", Toast.LENGTH_SHORT).show();
-//                                            }else{
-//                                                pd.cancel();
-//                                                Toast.makeText(ctx, "myfile uploaded Successfully", Toast.LENGTH_SHORT).show();
-//                                                populateRecent();
-//                                            }
-//                                        }
-//                                    });
-//                                }
-//                            }).addOnFailureListener(new OnFailureListener() {
-//                                @Override
-//                                public void onFailure(@NonNull Exception e) {
-//                                    pd.cancel();
-//                                    Toast.makeText(ctx, "An error occurred", Toast.LENGTH_SHORT).show();
-//                                }
-//                            });
-////
-////
-//
-//                        }else{
-//                            pd.cancel();
-//                            Toast.makeText(ctx, "An error occurred", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                })
-//                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-//                    @Override
-//                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-//                        int progress = (int)(100*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
-//                        pd.setProgress(progress);
-//                    }
-//                });
-//
-//    }
-
-
 
     public void populateRecent(){
 
@@ -370,20 +300,6 @@ public class HomeFragment extends Fragment {
         fa.notifyDataSetChanged();
     }
 
-
-    void reduceImage(int r,ImageView imageview){
-        drawable = getResources().getDrawable(r);
-
-        bitmap1 = ((BitmapDrawable)drawable).getBitmap();
-
-        bitmap1.compress(Bitmap.CompressFormat.JPEG,40,bytearrayoutputstream);
-
-        BYTE = bytearrayoutputstream.toByteArray();
-
-        bitmap2 = BitmapFactory.decodeByteArray(BYTE,0,BYTE.length);
-
-        imageview.setImageBitmap(bitmap2);
-    }
 
     @Override
     public void onResume() {

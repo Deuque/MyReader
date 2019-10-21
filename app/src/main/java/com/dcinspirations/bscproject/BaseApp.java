@@ -105,7 +105,7 @@ public class BaseApp extends Application {
 
     public static String resolveTime(String s){
         String test[] = s.split(" ");
-        SimpleDateFormat tf = new SimpleDateFormat("MM YY HH:mma");
+        SimpleDateFormat tf = new SimpleDateFormat("mm yy hh:mma");
         String date = tf.format( Calendar.getInstance().getTime());
         String date2[]= date.split(" ");
         String Day = String.valueOf(Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
@@ -154,7 +154,7 @@ return null;
         return details;
     }
     public static String getTime(){
-        SimpleDateFormat tf = new SimpleDateFormat("MM YY HH:mma");
+        SimpleDateFormat tf = new SimpleDateFormat("mm yy hh:mma");
         String date = tf.format( Calendar.getInstance().getTime());
         return String.valueOf(Calendar.getInstance().get(Calendar.DAY_OF_MONTH))+" "+date;
     }
