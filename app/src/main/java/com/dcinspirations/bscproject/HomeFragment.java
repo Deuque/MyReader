@@ -134,7 +134,7 @@ public class HomeFragment extends Fragment {
 
         final Boolean loggedIn = new Sp().getLoggedIn();
         user cu = new Sp().getUInfo();
-            welcome.setText(loggedIn?"Hello "+cu.getUsername()+"!":"Hello user!");
+        welcome.setText(loggedIn?"Hello "+cu.getUsername()+"!":"Hello user!");
 
         popup = v.findViewById(R.id.popup);
         popup.setOnClickListener(new View.OnClickListener() {

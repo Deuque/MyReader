@@ -28,10 +28,6 @@ import com.google.gson.reflect.TypeToken;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
 
-//import org.docx4j.Docx4J;
-//import org.docx4j.model.fields.FieldUpdater;
-//import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;

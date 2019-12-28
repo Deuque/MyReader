@@ -45,8 +45,8 @@ dependencies {
     implementation 'com.jackandphantom.android:blurimage:1.2.0'
 
 
-        implementation 'com.itextpdf:itextg:5.5.10'
-        implementation files('libs/aspose-words-19.2-android.via.java.jar')
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation files('libs/aspose-words-19.2-android.via.java.jar')
 
 
 
